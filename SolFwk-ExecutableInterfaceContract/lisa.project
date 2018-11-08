@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 
 <Project>
-<Name>ExecutableInterfaceContract</Name>
+<Name>SolFwk-ExecutableInterfaceContract</Name>
 <Version>V2</Version>
 <Notes></Notes>
 <ActiveConfig>{{LISA_RELATIVE_PROJ_ROOT}}/Configs/project.config</ActiveConfig>
