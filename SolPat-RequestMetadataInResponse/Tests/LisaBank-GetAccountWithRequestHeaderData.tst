@@ -3,8 +3,8 @@
 <TestCase name="LisaBank-GetAccountWithRequestHeaderData" version="5">
 
 <meta>
-   <create version="10.3.0" buildNumber="10.3.0.297" author="admin" date="11/09/2018" host="SARDA01P5520" />
-   <lastEdited version="10.3.0" buildNumber="10.3.0.297" author="admin" date="11/09/2018" host="SARDA01P5520" />
+   <create version="10.3.0" buildNumber="10.3.0.297" author="sarda01" date="11/09/2018" host="SARDA01P5520" />
+   <lastEdited version="10.3.0" buildNumber="10.3.0.297" author="sarda01" date="11/09/2018" host="SARDA01P5520" />
 </meta>
 
 <id>62FE877FE40411E880E900155DA5FC02</id>
