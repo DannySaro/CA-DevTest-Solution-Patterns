@@ -1,0 +1,147 @@
+<?xml version="1.0" ?>
+
+
+<!-- TestCase Results Document created by LISA Test Editor -->
+<!-- On: Fri Nov 09 14:10:59 CET 2018 -->
+
+
+<Results name="LisaBank-GetAccountWithRequestHeaderData">
+
+
+    <Result node="Web Service">
+      <content type="xstream" charset="UTF-8"><![CDATA[<com.itko.lisa.gui.XMLResultsCache>
+  <Sxml>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#xd;
+&lt;env:Envelope xmlns:env=&apos;http://schemas.xmlsoap.org/soap/envelope/&apos;&gt;&#xd;
+    &lt;env:Header&gt;&lt;/env:Header&gt;&#xd;
+    &lt;env:Body&gt;&#xd;
+        &lt;ns2:getAccountResponse xmlns:ns2=&quot;http://ejb3.examples.itko.com/&quot;&gt;&#xd;
+            &lt;return&gt;&#xd;
+                &lt;balance&gt;201023.00&lt;/balance&gt;&#xd;
+                &lt;id&gt;1433785279732959&lt;/id&gt;&#xd;
+                &lt;name&gt;Primary&lt;/name&gt;&#xd;
+                &lt;type&gt;CHECKING&lt;/type&gt;&#xd;
+            &lt;/return&gt;&#xd;
+        &lt;/ns2:getAccountResponse&gt;&#xd;
+    &lt;/env:Body&gt;&#xd;
+&lt;/env:Envelope&gt;&#xd;
+&#xd;
+&lt;!--&#xd;
+Request Header key-value pairs:&#xd;
+HTTP-Method=POST
+HTTP-URI=/
+HTTP-Version=1.1
+Content-Type=text/xml; charset=utf-8
+SOAPAction=&quot;&quot;
+User-Agent=Axis/1.4-LISA
+CustomHeader3=xyz
+CustomHeader2=MyHeader
+CustomHeader1=1
+lisaFrameRemoteIP=10.0.75.1
+lisaFrameRoot=true
+lisaFrameID=3b929a30-e420-11e8-a73e-5cea1d208d8d
+Content-Length=343
+Host=localhost:8001
+Connection=Keep-Alive
+lisa.vse.request.client.id=127.0.0.1:65367&#xd;
+--&gt;&#xd;
+&lt;!--&#xd;
+&lt;RequestHeaders&gt;&#xd;
+&lt;request&gt;
+  &lt;header&gt;
+    &lt;key&gt;HTTP-Method&lt;/key&gt;
+    &lt;value&gt;POST&lt;/value&gt;
+  &lt;/header&gt;
+  &lt;header&gt;
+    &lt;key&gt;HTTP-URI&lt;/key&gt;
+    &lt;value&gt;/&lt;/value&gt;
+  &lt;/header&gt;
+  &lt;header&gt;
+    &lt;key&gt;HTTP-Version&lt;/key&gt;
+    &lt;value&gt;1.1&lt;/value&gt;
+  &lt;/header&gt;
+  &lt;header&gt;
+    &lt;key&gt;Content-Type&lt;/key&gt;
+    &lt;value&gt;text/xml; charset&lt;/key&gt;
+    &lt;value&gt;utf-8&lt;/value&gt;
+  &lt;/header&gt;
+  &lt;header&gt;
+    &lt;key&gt;SOAPAction&lt;/key&gt;
+    &lt;value&gt;&quot;&quot;&lt;/value&gt;
+  &lt;/header&gt;
+  &lt;header&gt;
+    &lt;key&gt;User-Agent&lt;/key&gt;
+    &lt;value&gt;Axis/1.4-LISA&lt;/value&gt;
+  &lt;/header&gt;
+  &lt;header&gt;
+    &lt;key&gt;CustomHeader3&lt;/key&gt;
+    &lt;value&gt;xyz&lt;/value&gt;
+  &lt;/header&gt;
+  &lt;header&gt;
+    &lt;key&gt;CustomHeader2&lt;/key&gt;
+    &lt;value&gt;MyHeader&lt;/value&gt;
+  &lt;/header&gt;
+  &lt;header&gt;
+    &lt;key&gt;CustomHeader1&lt;/key&gt;
+    &lt;value&gt;1&lt;/value&gt;
+  &lt;/header&gt;
+  &lt;header&gt;
+    &lt;key&gt;lisaFrameRemoteIP&lt;/key&gt;
+    &lt;value&gt;10.0.75.1&lt;/value&gt;
+  &lt;/header&gt;
+  &lt;header&gt;
+    &lt;key&gt;lisaFrameRoot&lt;/key&gt;
+    &lt;value&gt;true&lt;/value&gt;
+  &lt;/header&gt;
+  &lt;header&gt;
+    &lt;key&gt;lisaFrameID&lt;/key&gt;
+    &lt;value&gt;3b929a30-e420-11e8-a73e-5cea1d208d8d&lt;/value&gt;
+  &lt;/header&gt;
+  &lt;header&gt;
+    &lt;key&gt;Content-Length&lt;/key&gt;
+    &lt;value&gt;343&lt;/value&gt;
+  &lt;/header&gt;
+  &lt;header&gt;
+    &lt;key&gt;Host&lt;/key&gt;
+    &lt;value&gt;localhost:8001&lt;/value&gt;
+  &lt;/header&gt;
+  &lt;header&gt;
+    &lt;key&gt;Connection&lt;/key&gt;
+    &lt;value&gt;Keep-Alive&lt;/value&gt;
+  &lt;/header&gt;
+  &lt;header&gt;
+    &lt;key&gt;lisa.vse.request.client.id&lt;/key&gt;
+    &lt;value&gt;127.0.0.1:65367&lt;/value&gt;
+  &lt;/header&gt;
+&lt;/request&gt;
+&#xd;
+&lt;/RequestHeaders&gt;&#xd;
+--&gt;&#xd;
+&#xd;
+&#xd;
+</Sxml>
+  <headers>HTTP/1.1 200 OK&#xd;
+Server: LISA/Virtual-Environment-Server&#xd;
+Date: Fri, 09 Nov 2018 14:06:12 CET&#xd;
+X-Powered-By: LISA/10.3.0 (10.3.0.297)&#xd;
+HTTP-Method: POST&#xd;
+HTTP-URI: /&#xd;
+SOAPAction: &quot;&quot;&#xd;
+User-Agent: Axis/1.4-LISA&#xd;
+CustomHeader3: xyz&#xd;
+CustomHeader2: MyHeader&#xd;
+CustomHeader1: 1&#xd;
+lisaFrameRemoteIP: 10.0.75.1&#xd;
+lisaFrameRoot: true&#xd;
+lisaFrameID: 3b929a30-e420-11e8-a73e-5cea1d208d8d&#xd;
+Content-Length: 2321&#xd;
+Host: localhost:8001&#xd;
+Connection: Keep-Alive&#xd;
+lisa.vse.request.client.id: 127.0.0.1:65367&#xd;
+Content-Type: text/xml; charset=utf-8&#xd;
+</headers>
+  <attachments/>
+</com.itko.lisa.gui.XMLResultsCache>]]></content>
+    </Result>
+
+
+</Results>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VSModel name="LisaBank-GetAccount-AddAllReqMetaToRspMeta" version="5">
+
+<meta>
+   <create author="admin" buildNumber="10.3.0.297" date="11/09/2018" host="SARDA01P5520" version="10.3.0"/>
+   <lastEdited author="admin" buildNumber="10.3.0.297" date="11/09/2018" host="SARDA01P5520" version="10.3.0"/>
+</meta>
+
+<id>BDC5510FE40311E880E900155DA5FC02</id>
+<IsInProject>true</IsInProject>
+<sig>ZWQ9NSZ0Y3Y9NSZsaXNhdj0xMC4zLjAgKDEwLjMuMC4yOTcpJm5vZGVzPS0xMTgzMDAxNTQw</sig>
+<subprocess>false</subprocess>
+
+<initState>
+</initState>
+
+<resultState>
+</resultState>
+
+<deletedProps>
+</deletedProps>
+
+<associatedResources>
+<file type="rawTransactionStore">{{LISA_RELATIVE_PROJ_ROOT}}/Data/LisaBank-GetAccount.vts</file>
+<file type="session">{{LISA_RELATIVE_PROJ_ROOT}}/VirtualServices/VRScenarios/LisaBank-GetAccount.vr2</file>
+</associatedResources>
+    <Node log="" name="Virtual HTTPS Listener 8001" next="Virtual Service Router" quiet="true" think="0" type="com.itko.lisa.vse.stateful.protocol.http.HttpListenStep" uid="null" useFilters="true" version="1"> 
+
+
+      <!-- Filters -->
+      <Filter type="com.itko.lisa.vse.stateful.common.DataProtocolFilter">
+        <valueToFilterKey>lisa.vse.request</valueToFilterKey>
+<dataProtocol>com.itko.lisa.vse.stateful.protocol.ws.WSSOAPProtocolHandler</dataProtocol>
+<processRequests>true</processRequests>
+<processResponses>false</processResponses>
+<CustomFilterData>
+</CustomFilterData>
+      </Filter>
+
+
+      <!-- Assertions -->
+<CheckResult assertTrue="true" name="If being efficient" type="com.itko.lisa.vse.stateful.AssertOnExecutionMode">
+<log>Current execution mode is Most Efficient, branching to VS Image Response Selection</log>
+<then>VS Image Response Selection</then>
+<valueToAssertKey/>
+        <executionMode>EFFICIENT</executionMode>
+</CheckResult>
+
+<outputAsObject>true</outputAsObject>
+<onExceptionStep>abort</onExceptionStep>
+<listenPort>8001</listenPort>
+<basePath>/</basePath>
+<bindOnly>false</bindOnly>
+<useSSL>false</useSSL>
+<sslClientAuthType>none</sslClientAuthType>
+    </Node>
+
+
+    <Node log="" name="Virtual Service Router" next="VS Image Response Selection" quiet="true" think="0" type="com.itko.lisa.vse.stateful.VSRouterStep" uid="null" useFilters="true" version="1"> 
+
+<onerror>abort</onerror>
+<script>// This script must return either an enum entry from ExecutionMode or
+// a string that is the name of an enum entry.  The DYNAMIC entry may
+// not be returned.  It will be executed for DYNAMIC execution mode
+// only.
+import com.itko.lisa.vse.ExecutionMode;
+
+return ExecutionMode.EFFICIENT;
+
+
+/* other values: 
+	ExecutionMode.TRACK;
+	ExecutionMode.STAND_IN;
+	ExecutionMode.LIVE;
+	ExecutionMode.FAILOVER;
+	ExecutionMode.VALIDATION;
+	ExecutionMode.LEARNING;
+*/
+</script>
+<supportedModes>
+<mode>TRACK</mode>
+<mode>DYNAMIC</mode>
+<mode>EFFICIENT</mode>
+</supportedModes>
+    </Node>
+
+
+    <Node log="" name="VS Image Response Selection" next="Virtual HTTPS Responder" quiet="true" think="0" type="com.itko.lisa.vse.stateful.ConversationalStep" uid="null" useFilters="true" version="1"> 
+
+
+      <!-- Assertions -->
+<CheckResult assertTrue="true" name="If tracking" type="com.itko.lisa.vse.stateful.AssertOnExecutionMode">
+<log>Current execution mode is Transaction Tracking, branching to Virtual Service Tracking</log>
+<then>Virtual Service Tracking</then>
+<valueToAssertKey/>
+        <executionMode>TRACK</executionMode>
+</CheckResult>
+
+<CheckResult assertTrue="false" name="Add Request MetaData to Response MetaData" type="com.itko.lisa.test.AssertByScript">
+<log/>
+<then>fail</then>
+        <script>// This script should return a boolean result indicating the assertion is true or false&#xd;
+&#xd;
+for (int i = 0; i &lt; lisa_vse_response.size() ;i++)&#xd;
+{&#xd;
+    lisa_vse_response.get(i).getMetaData().addAll(lisa_vse_request.getMetaData());&#xd;
+}&#xd;
+&#xd;
+return true;</script>
+        <language>BeanShell</language>
+        <copyprops>TestExecPropsAndSystemProps</copyprops>
+</CheckResult>
+
+<vsiSource>{{LISA_RELATIVE_PROJ_ROOT}}/VirtualServices/Images/LisaBank-GetAccount.vsi</vsiSource>
+<requestPropertyName>lisa.vse.request</requestPropertyName>
+<outputAsObject>true</outputAsObject>
+<onExceptionStep>abort</onExceptionStep>
+    </Node>
+
+
+    <Node log="" name="Virtual HTTPS Responder" next="Virtual HTTPS Listener 8001" quiet="false" think="0" type="com.itko.lisa.vse.stateful.protocol.http.HttpRespondStep" uid="null" useFilters="true" version="1"> 
+
+<responseList>lisa.vse.response</responseList>
+<onExceptionStep>abort</onExceptionStep>
+    </Node>
+
+
+    <Node log="" name="Virtual Service Tracking" next="Virtual HTTPS Responder" quiet="true" think="0" type="com.itko.lisa.vse.stateful.VSTrackingStep" uid="null" useFilters="true" version="1"> 
+
+<imageResponseProperty>lisa.vse.image.response</imageResponseProperty>
+<liveResponseProperty>lisa.vse.live.response</liveResponseProperty>
+<onExceptionStep>abort</onExceptionStep>
+    </Node>
+
+
+    <Node log="The test was aborted" name="abort" next="fail" quiet="true" think="0h" type="com.itko.lisa.test.AbortStep" uid="BDC55115E40311E880E900155DA5FC02" useFilters="true" version="1"> 
+
+    </Node>
+
+
+    <Node log="" name="fail" next="fail" quiet="true" think="0h" type="com.itko.lisa.test.Abend" uid="BDC55113E40311E880E900155DA5FC02" useFilters="true" version="1"> 
+
+    </Node>
+
+
+    <Node log="" name="end" next="fail" quiet="true" think="0h" type="com.itko.lisa.test.NormalEnd" uid="BDC55111E40311E880E900155DA5FC02" useFilters="true" version="1"> 
+
+    </Node>
+
+
+</VSModel>

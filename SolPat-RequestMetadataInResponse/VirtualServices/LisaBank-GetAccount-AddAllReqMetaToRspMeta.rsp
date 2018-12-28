@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Results name="LisaBank-GetAccount-AddAllReqMetaToRspMeta">
+
+
+    <Result node="Virtual HTTPS Listener 8001">
+      <content charset="UTF-8" type="xstream"><![CDATA[<com.itko.lisa.vse.stateful.model.Request>
+  <id>0</id>
+  <metaData serialization="custom">
+    <com.itko.lisa.vse.stateful.model.PLCarrier>
+      <default/>
+      <com.itko.util.ParameterList>
+        <terms>
+          <com.itko.util.Parameter>
+            <single>false</single>
+            <key>HTTP-Method</key>
+            <value>POST</value>
+            <encrypted>false</encrypted>
+            <enableValidation>false</enableValidation>
+          </com.itko.util.Parameter>
+          <com.itko.util.Parameter>
+            <single>false</single>
+            <key>HTTP-URI</key>
+            <value>/</value>
+            <encrypted>false</encrypted>
+            <enableValidation>false</enableValidation>
+          </com.itko.util.Parameter>
+          <com.itko.util.Parameter>
+            <single>false</single>
+            <key>HTTP-Version</key>
+            <value>1.1</value>
+            <encrypted>false</encrypted>
+            <enableValidation>false</enableValidation>
+          </com.itko.util.Parameter>
+          <com.itko.util.Parameter>
+            <single>false</single>
+            <key>Content-Type</key>
+            <value>text/xml; charset=utf-8</value>
+            <encrypted>false</encrypted>
+            <enableValidation>false</enableValidation>
+          </com.itko.util.Parameter>
+          <com.itko.util.Parameter>
+            <single>false</single>
+            <key>SOAPAction</key>
+            <value>&quot;&quot;</value>
+            <encrypted>false</encrypted>
+            <enableValidation>false</enableValidation>
+          </com.itko.util.Parameter>
+          <com.itko.util.Parameter>
+            <single>false</single>
+            <key>User-Agent</key>
+            <value>Axis/1.4-LISA</value>
+            <encrypted>false</encrypted>
+            <enableValidation>false</enableValidation>
+          </com.itko.util.Parameter>
+          <com.itko.util.Parameter>
+            <single>false</single>
+            <key>CustomHeader3</key>
+            <value>xyz</value>
+            <encrypted>false</encrypted>
+            <enableValidation>false</enableValidation>
+          </com.itko.util.Parameter>
+          <com.itko.util.Parameter>
+            <single>false</single>
+            <key>CustomHeader2</key>
+            <value>MyHeader</value>
+            <encrypted>false</encrypted>
+            <enableValidation>false</enableValidation>
+          </com.itko.util.Parameter>
+          <com.itko.util.Parameter>
+            <single>false</single>
+            <key>CustomHeader1</key>
+            <value>1</value>
+            <encrypted>false</encrypted>
+            <enableValidation>false</enableValidation>
+          </com.itko.util.Parameter>
+          <com.itko.util.Parameter>
+            <single>false</single>
+            <key>lisaFrameRemoteIP</key>
+            <value>10.0.75.1</value>
+            <encrypted>false</encrypted>
+            <enableValidation>false</enableValidation>
+          </com.itko.util.Parameter>
+          <com.itko.util.Parameter>
+            <single>false</single>
+            <key>lisaFrameRoot</key>
+            <value>true</value>
+            <encrypted>false</encrypted>
+            <enableValidation>false</enableValidation>
+          </com.itko.util.Parameter>
+          <com.itko.util.Parameter>
+            <single>false</single>
+            <key>lisaFrameID</key>
+            <value>a6f3d6b0-e41e-11e8-9cb4-5cea1d208d8d</value>
+            <encrypted>false</encrypted>
+            <enableValidation>false</enableValidation>
+          </com.itko.util.Parameter>
+          <com.itko.util.Parameter>
+            <single>false</single>
+            <key>Content-Length</key>
+            <value>343</value>
+            <encrypted>false</encrypted>
+            <enableValidation>false</enableValidation>
+          </com.itko.util.Parameter>
+          <com.itko.util.Parameter>
+            <single>false</single>
+            <key>Host</key>
+            <value>localhost:8001</value>
+            <encrypted>false</encrypted>
+            <enableValidation>false</enableValidation>
+          </com.itko.util.Parameter>
+          <com.itko.util.Parameter>
+            <single>false</single>
+            <key>Connection</key>
+            <value>Keep-Alive</value>
+            <encrypted>false</encrypted>
+            <enableValidation>false</enableValidation>
+          </com.itko.util.Parameter>
+          <com.itko.util.Parameter>
+            <single>false</single>
+            <key>lisa.vse.request.client.id</key>
+            <value>127.0.0.1:63528</value>
+            <encrypted>false</encrypted>
+            <enableValidation>false</enableValidation>
+          </com.itko.util.Parameter>
+        </terms>
+        <dupesAllowed>true</dupesAllowed>
+        <delimiter>&amp;</delimiter>
+        <noDecode>false</noDecode>
+      </com.itko.util.ParameterList>
+    </com.itko.lisa.vse.stateful.model.PLCarrier>
+  </metaData>
+  <binary>false</binary>
+  <body>eJxVkE9PhEAMxe/7KSa9OwXGDQsBNppoYqInNfGKQ8OiMCU7I+C3l3/Lxlv72t97TZPj0NSio7Ot
+2KTgSw8EGc1FZcoU3t8ebw5wzHaJ5bwl08UPpqOaWxIjZmy8yimcnGtjRKtP1ORWjtNpJPlc4lQg
+rRzCSg52g/q+l72adwPP8/Hj5fl19oFsJ8QWfc/F7ySMUknuTmv+MW5x26zo61NJGvKmrcnKyn2z
+1NwgLNxI5gv2VFxAyPxbpcLDPgijUAXRPkpwW1rj8Jo3X4T/T7r2l+9kfwi6cEE=</body>
+  <isNewAPISet>true</isNewAPISet>
+  <charset>UTF-8</charset>
+  <readWriteLock>
+    <readerLock>
+      <sync class="java.util.concurrent.locks.ReentrantReadWriteLock$NonfairSync" serialization="custom">
+        <java.util.concurrent.locks.AbstractQueuedSynchronizer>
+          <default>
+            <state>0</state>
+          </default>
+        </java.util.concurrent.locks.AbstractQueuedSynchronizer>
+        <java.util.concurrent.locks.ReentrantReadWriteLock_-Sync>
+          <default/>
+        </java.util.concurrent.locks.ReentrantReadWriteLock_-Sync>
+      </sync>
+    </readerLock>
+    <writerLock>
+      <sync class="java.util.concurrent.locks.ReentrantReadWriteLock$NonfairSync" reference="../../readerLock/sync"/>
+    </writerLock>
+    <sync class="java.util.concurrent.locks.ReentrantReadWriteLock$NonfairSync" reference="../readerLock/sync"/>
+  </readWriteLock>
+  <compress>true</compress>
+  <UNKNOWN__OP>unknown-op</UNKNOWN__OP>
+  <operation>getAccount</operation>
+  <arguments serialization="custom">
+    <com.itko.lisa.vse.stateful.model.PLCarrier>
+      <default/>
+      <com.itko.util.UniqueKeysParameterList>
+        <terms>
+          <com.itko.util.Parameter>
+            <single>false</single>
+            <key>accountId</key>
+            <value>1433785279732959</value>
+            <encrypted>false</encrypted>
+            <enableValidation>false</enableValidation>
+          </com.itko.util.Parameter>
+        </terms>
+        <dupesAllowed>true</dupesAllowed>
+        <delimiter>&amp;</delimiter>
+        <noDecode>false</noDecode>
+      </com.itko.util.UniqueKeysParameterList>
+    </com.itko.lisa.vse.stateful.model.PLCarrier>
+  </arguments>
+  <matchTolerance>EXACT</matchTolerance>
+  <disableMatchScript>false</disableMatchScript>
+  <attributes serialization="custom">
+    <com.itko.lisa.vse.stateful.model.PLCarrier>
+      <default/>
+      <com.itko.util.ParameterList>
+        <terms>
+          <com.itko.util.Parameter>
+            <single>false</single>
+            <key>HTTP-Segment-Attr-0</key>
+            <value></value>
+            <encrypted>false</encrypted>
+            <enableValidation>false</enableValidation>
+          </com.itko.util.Parameter>
+          <com.itko.util.Parameter>
+            <single>false</single>
+            <key>xmlns</key>
+            <value>http://ejb3.examples.itko.com/</value>
+            <encrypted>false</encrypted>
+            <enableValidation>false</enableValidation>
+          </com.itko.util.Parameter>
+          <com.itko.util.Parameter>
+            <single>false</single>
+            <key>recorded_raw_request</key>
+            <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;
+  &lt;soapenv:Body&gt;
+    &lt;getAccount xmlns=&quot;http://ejb3.examples.itko.com/&quot;&gt;
+      &lt;accountId xmlns=&quot;&quot;&gt;1433785279732959&lt;/accountId&gt;
+    &lt;/getAccount&gt;
+  &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;</value>
+            <encrypted>false</encrypted>
+            <enableValidation>false</enableValidation>
+          </com.itko.util.Parameter>
+        </terms>
+        <dupesAllowed>true</dupesAllowed>
+        <delimiter>&amp;</delimiter>
+        <noDecode>false</noDecode>
+      </com.itko.util.ParameterList>
+    </com.itko.lisa.vse.stateful.model.PLCarrier>
+  </attributes>
+</com.itko.lisa.vse.stateful.model.Request>]]></content>
+    </Result>
+
+
+    <Result node="VS Image Response Selection">
+      <content charset="UTF-8" type="xstream"><![CDATA[<list>
+  <com.itko.lisa.vse.stateful.model.TransientResponse>
+    <id>0</id>
+    <metaData serialization="custom">
+      <com.itko.lisa.vse.stateful.model.PLCarrier>
+        <default>
+          <compressed>eJx9zc0KgkAUBeB9TyGzqsVFaa0D/UFRlKRIW8FLDU0zw52bJuK7JxQtXLQ5q++cEzstJ0EQu+CO
+bSK2eZ7CGb2zxiOsbIVCzqMoDt1/BTm+WMjTfiQzpBpJyMMuW4SFIn6WGjamVmTNAw3DB4xa65KH
+365LbszuaJvprO9H5AKpbZCwgmX7nR+8Vr4skLyyJmNS5vprDqHlG2/yS+o=</compressed>
+        </default>
+        <com.itko.util.ParameterList>
+          <terms>
+            <com.itko.util.Parameter>
+              <single>false</single>
+              <key>HTTP-Response-Code</key>
+              <value>200</value>
+              <encrypted>false</encrypted>
+              <enableValidation>false</enableValidation>
+            </com.itko.util.Parameter>
+            <com.itko.util.Parameter>
+              <single>false</single>
+              <key>HTTP-Response-Code-Text</key>
+              <value>OK</value>
+              <encrypted>false</encrypted>
+              <enableValidation>false</enableValidation>
+            </com.itko.util.Parameter>
+            <com.itko.util.Parameter>
+              <single>false</single>
+              <key>Server</key>
+              <value>LISA/Virtual-Environment-Server</value>
+              <encrypted>false</encrypted>
+              <enableValidation>false</enableValidation>
+            </com.itko.util.Parameter>
+            <com.itko.util.Parameter>
+              <single>false</single>
+              <key>Date</key>
+              <value>{{=httpNow()}}</value>
+              <encrypted>false</encrypted>
+              <enableValidation>false</enableValidation>
+            </com.itko.util.Parameter>
+            <com.itko.util.Parameter>
+              <single>false</single>
+              <key>X-Powered-By</key>
+              <value>LISA/{{=lisaVersionString()}}</value>
+              <encrypted>false</encrypted>
+              <enableValidation>false</enableValidation>
+            </com.itko.util.Parameter>
+            <com.itko.util.Parameter>
+              <single>false</single>
+              <key>HTTP-Method</key>
+              <value>POST</value>
+              <encrypted>false</encrypted>
+              <enableValidation>false</enableValidation>
+            </com.itko.util.Parameter>
+            <com.itko.util.Parameter>
+              <single>false</single>
+              <key>HTTP-URI</key>
+              <value>/</value>
+              <encrypted>false</encrypted>
+              <enableValidation>false</enableValidation>
+            </com.itko.util.Parameter>
+            <com.itko.util.Parameter>
+              <single>false</single>
+              <key>HTTP-Version</key>
+              <value>1.1</value>
+              <encrypted>false</encrypted>
+              <enableValidation>false</enableValidation>
+            </com.itko.util.Parameter>
+            <com.itko.util.Parameter>
+              <single>false</single>
+              <key>Content-Type</key>
+              <value>text/xml; charset=utf-8</value>
+              <encrypted>false</encrypted>
+              <enableValidation>false</enableValidation>
+            </com.itko.util.Parameter>
+            <com.itko.util.Parameter>
+              <single>false</single>
+              <key>SOAPAction</key>
+              <value>&quot;&quot;</value>
+              <encrypted>false</encrypted>
+              <enableValidation>false</enableValidation>
+            </com.itko.util.Parameter>
+            <com.itko.util.Parameter>
+              <single>false</single>
+              <key>User-Agent</key>
+              <value>Axis/1.4-LISA</value>
+              <encrypted>false</encrypted>
+              <enableValidation>false</enableValidation>
+            </com.itko.util.Parameter>
+            <com.itko.util.Parameter>
+              <single>false</single>
+              <key>CustomHeader3</key>
+              <value>xyz</value>
+              <encrypted>false</encrypted>
+              <enableValidation>false</enableValidation>
+            </com.itko.util.Parameter>
+            <com.itko.util.Parameter>
+              <single>false</single>
+              <key>CustomHeader2</key>
+              <value>MyHeader</value>
+              <encrypted>false</encrypted>
+              <enableValidation>false</enableValidation>
+            </com.itko.util.Parameter>
+            <com.itko.util.Parameter>
+              <single>false</single>
+              <key>CustomHeader1</key>
+              <value>1</value>
+              <encrypted>false</encrypted>
+              <enableValidation>false</enableValidation>
+            </com.itko.util.Parameter>
+            <com.itko.util.Parameter>
+              <single>false</single>
+              <key>lisaFrameRemoteIP</key>
+              <value>10.0.75.1</value>
+              <encrypted>false</encrypted>
+              <enableValidation>false</enableValidation>
+            </com.itko.util.Parameter>
+            <com.itko.util.Parameter>
+              <single>false</single>
+              <key>lisaFrameRoot</key>
+              <value>true</value>
+              <encrypted>false</encrypted>
+              <enableValidation>false</enableValidation>
+            </com.itko.util.Parameter>
+            <com.itko.util.Parameter>
+              <single>false</single>
+              <key>lisaFrameID</key>
+              <value>a6f3d6b0-e41e-11e8-9cb4-5cea1d208d8d</value>
+              <encrypted>false</encrypted>
+              <enableValidation>false</enableValidation>
+            </com.itko.util.Parameter>
+            <com.itko.util.Parameter>
+              <single>false</single>
+              <key>Content-Length</key>
+              <value>343</value>
+              <encrypted>false</encrypted>
+              <enableValidation>false</enableValidation>
+            </com.itko.util.Parameter>
+            <com.itko.util.Parameter>
+              <single>false</single>
+              <key>Host</key>
+              <value>localhost:8001</value>
+              <encrypted>false</encrypted>
+              <enableValidation>false</enableValidation>
+            </com.itko.util.Parameter>
+            <com.itko.util.Parameter>
+              <single>false</single>
+              <key>Connection</key>
+              <value>Keep-Alive</value>
+              <encrypted>false</encrypted>
+              <enableValidation>false</enableValidation>
+            </com.itko.util.Parameter>
+            <com.itko.util.Parameter>
+              <single>false</single>
+              <key>lisa.vse.request.client.id</key>
+              <value>127.0.0.1:63528</value>
+              <encrypted>false</encrypted>
+              <enableValidation>false</enableValidation>
+            </com.itko.util.Parameter>
+            <com.itko.util.Parameter reference="../com.itko.util.Parameter[6]"/>
+            <com.itko.util.Parameter reference="../com.itko.util.Parameter[7]"/>
+            <com.itko.util.Parameter reference="../com.itko.util.Parameter[8]"/>
+            <com.itko.util.Parameter reference="../com.itko.util.Parameter[9]"/>
+            <com.itko.util.Parameter reference="../com.itko.util.Parameter[10]"/>
+            <com.itko.util.Parameter reference="../com.itko.util.Parameter[11]"/>
+            <com.itko.util.Parameter reference="../com.itko.util.Parameter[12]"/>
+            <com.itko.util.Parameter reference="../com.itko.util.Parameter[13]"/>
+            <com.itko.util.Parameter reference="../com.itko.util.Parameter[14]"/>
+            <com.itko.util.Parameter reference="../com.itko.util.Parameter[15]"/>
+            <com.itko.util.Parameter reference="../com.itko.util.Parameter[16]"/>
+            <com.itko.util.Parameter reference="../com.itko.util.Parameter[17]"/>
+            <com.itko.util.Parameter reference="../com.itko.util.Parameter[18]"/>
+            <com.itko.util.Parameter reference="../com.itko.util.Parameter[19]"/>
+            <com.itko.util.Parameter reference="../com.itko.util.Parameter[20]"/>
+            <com.itko.util.Parameter reference="../com.itko.util.Parameter[21]"/>
+          </terms>
+          <dupesAllowed>true</dupesAllowed>
+          <delimiter>&amp;</delimiter>
+          <noDecode>false</noDecode>
+        </com.itko.util.ParameterList>
+      </com.itko.lisa.vse.stateful.model.PLCarrier>
+    </metaData>
+    <binary>false</binary>
+    <isNewAPISet>true</isNewAPISet>
+    <charset>UTF-8</charset>
+    <readWriteLock>
+      <readerLock>
+        <sync class="java.util.concurrent.locks.ReentrantReadWriteLock$NonfairSync" serialization="custom">
+          <java.util.concurrent.locks.AbstractQueuedSynchronizer>
+            <default>
+              <state>0</state>
+            </default>
+          </java.util.concurrent.locks.AbstractQueuedSynchronizer>
+          <java.util.concurrent.locks.ReentrantReadWriteLock_-Sync>
+            <default/>
+          </java.util.concurrent.locks.ReentrantReadWriteLock_-Sync>
+        </sync>
+      </readerLock>
+      <writerLock>
+        <sync class="java.util.concurrent.locks.ReentrantReadWriteLock$NonfairSync" reference="../../readerLock/sync"/>
+      </writerLock>
+      <sync class="java.util.concurrent.locks.ReentrantReadWriteLock$NonfairSync" reference="../readerLock/sync"/>
+    </readWriteLock>
+    <compress>true</compress>
+    <squished>false</squished>
+    <unknown>false</unknown>
+    <thinkTimeSpec>0</thinkTimeSpec>
+    <bodyBytes>PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjxlbnY6RW52ZWxvcGUgeG1s
+bnM6ZW52PSdodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VudmVsb3BlLyc+DQogICAg
+PGVudjpIZWFkZXI+PC9lbnY6SGVhZGVyPg0KICAgIDxlbnY6Qm9keT4NCiAgICAgICAgPG5zMjpn
+ZXRBY2NvdW50UmVzcG9uc2UgeG1sbnM6bnMyPSJodHRwOi8vZWpiMy5leGFtcGxlcy5pdGtvLmNv
+bS8iPg0KICAgICAgICAgICAgPHJldHVybj4NCiAgICAgICAgICAgICAgICA8YmFsYW5jZT4yMDEw
+MjMuMDA8L2JhbGFuY2U+DQogICAgICAgICAgICAgICAgPGlkPnt7PXJlcXVlc3RfYWNjb3VudElk
+Oy8qMTQzMzc4NTI3OTczMjk1OCovfX08L2lkPg0KICAgICAgICAgICAgICAgIDxuYW1lPlByaW1h
+cnk8L25hbWU+DQogICAgICAgICAgICAgICAgPHR5cGU+Q0hFQ0tJTkc8L3R5cGU+DQogICAgICAg
+ICAgICA8L3JldHVybj4NCiAgICAgICAgPC9uczI6Z2V0QWNjb3VudFJlc3BvbnNlPg0KICAgIDwv
+ZW52OkJvZHk+DQo8L2VudjpFbnZlbG9wZT4NCg0KPCEtLQ0KUmVxdWVzdCBIZWFkZXIga2V5LXZh
+bHVlIHBhaXJzOg0Ke3s9bGlzYV92c2VfcmVxdWVzdC5nZXRNZXRhRGF0YSgpLnRvU3RyaW5nKCku
+cmVwbGFjZSgnJicsJ1xuJyk7fX0NCi0tPg0KPCEtLQ0KPFJlcXVlc3RIZWFkZXJzPg0Ke3s9Ijxy
+ZXF1ZXN0PlxuICA8aGVhZGVyPlxuICAgIDxrZXk+IiArIGxpc2FfdnNlX3JlcXVlc3QuZ2V0TWV0
+YURhdGEoKS50b1N0cmluZygpLnJlcGxhY2UoIiYiLCI8L3ZhbHVlPlxuICA8L2hlYWRlcj5cbiAg
+PGhlYWRlcj5cbiAgICA8a2V5PiIpLnJlcGxhY2UoIj0iLCI8L2tleT5cbiAgICA8dmFsdWU+Iikg
+KyAiPC92YWx1ZT5cbiAgPC9oZWFkZXI+XG48L3JlcXVlc3Q+XG4iO319DQo8L1JlcXVlc3RIZWFk
+ZXJzPg0KLS0+DQoNCg0K</bodyBytes>
+  </com.itko.lisa.vse.stateful.model.TransientResponse>
+</list>]]></content>
+    </Result>
+
+
+</Results>

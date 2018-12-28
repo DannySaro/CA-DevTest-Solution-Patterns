@@ -1,0 +1,304 @@
+<?xml version="1.0" ?>
+
+<VSModel name="responseSideDPH" version="5">
+
+<meta>
+   <create version="10.3.0" buildNumber="10.3.0.297" author="admin" date="11/15/2018" host="SARDA01P5520" />
+   <lastEdited version="10.3.0" buildNumber="10.3.0.297" author="admin" date="11/16/2018" host="SARDA01P5520" />
+</meta>
+
+<id>39C8D97EE8C711E8A24900155DA5FC02</id>
+<IsInProject>true</IsInProject>
+<sig>ZWQ9NSZ0Y3Y9NSZsaXNhdj0xMC4zLjAgKDEwLjMuMC4yOTcpJm5vZGVzPS0xMTgzMDAxNTM5</sig>
+<subprocess>false</subprocess>
+
+<initState>
+</initState>
+
+<resultState>
+</resultState>
+
+<deletedProps>
+</deletedProps>
+
+<associatedResources>
+<file type="rawTransactionStore">{{LISA_RELATIVE_PROJ_ROOT}}/Data/responseSideDPH.vts</file>
+<file type="session">{{LISA_RELATIVE_PROJ_ROOT}}/VirtualServices/VRScenarios/responseSideDPH.vr2</file>
+</associatedResources>
+    <Node name="Virtual HTTPS Listener 8002" log=""
+          type="com.itko.lisa.vse.stateful.protocol.http.HttpListenStep" 
+          version="1" 
+          uid="null" 
+          think="0" 
+          useFilters="true" 
+          quiet="true" 
+          next="Virtual Service Router" > 
+
+
+      <!-- Filters -->
+      <Filter type="com.itko.lisa.vse.stateful.common.DataProtocolFilter">
+        <valueToFilterKey>lisa.vse.request</valueToFilterKey>
+<dataProtocol>com.itko.lisa.vse.stateful.protocol.ws.WSSOAPProtocolHandler</dataProtocol>
+<processRequests>true</processRequests>
+<processResponses>false</processResponses>
+<CustomFilterData>
+</CustomFilterData>
+      </Filter>
+
+
+      <!-- Assertions -->
+<CheckResult assertTrue="true" name="If being efficient" type="com.itko.lisa.vse.stateful.AssertOnExecutionMode">
+<log>Current execution mode is Most Efficient, branching to VS Image Response Selection</log>
+<then>VS Image Response Selection</then>
+<valueToAssertKey></valueToAssertKey>
+        <executionMode>EFFICIENT</executionMode>
+</CheckResult>
+
+<outputAsObject>true</outputAsObject>
+<onExceptionStep>abort</onExceptionStep>
+<listenPort>8002</listenPort>
+<basePath>/</basePath>
+<bindOnly>false</bindOnly>
+<useSSL>false</useSSL>
+<sslClientAuthType>none</sslClientAuthType>
+    </Node>
+
+
+    <Node name="Virtual Service Router" log=""
+          type="com.itko.lisa.vse.stateful.VSRouterStep" 
+          version="1" 
+          uid="null" 
+          think="0" 
+          useFilters="true" 
+          quiet="true" 
+          next="VS Image Response Selection" > 
+
+<onerror>abort</onerror>
+<script>// This script must return either an enum entry from ExecutionMode or&#10;// a string that is the name of an enum entry.  The DYNAMIC entry may&#10;// not be returned.  It will be executed for DYNAMIC execution mode&#10;// only.&#10;import com.itko.lisa.vse.ExecutionMode;&#10;&#10;return ExecutionMode.EFFICIENT;&#10;&#10;&#10;/* other values: &#10;&#9;ExecutionMode.TRACK;&#10;&#9;ExecutionMode.STAND_IN;&#10;&#9;ExecutionMode.LIVE;&#10;&#9;ExecutionMode.FAILOVER;&#10;&#9;ExecutionMode.VALIDATION;&#10;&#9;ExecutionMode.LEARNING;&#10;*/&#10;</script>
+<supportedModes>
+<mode>EFFICIENT</mode>
+<mode>TRACK</mode>
+<mode>DYNAMIC</mode>
+</supportedModes>
+    </Node>
+
+
+    <Node name="VS Image Response Selection" log=""
+          type="com.itko.lisa.vse.stateful.ConversationalStep" 
+          version="1" 
+          uid="null" 
+          think="0" 
+          useFilters="true" 
+          quiet="true" 
+          next="Virtual HTTPS Responder" > 
+
+
+      <!-- Assertions -->
+<CheckResult assertTrue="true" name="If tracking" type="com.itko.lisa.vse.stateful.AssertOnExecutionMode">
+<log>Current execution mode is Transaction Tracking, branching to Virtual Service Tracking</log>
+<then>Virtual Service Tracking</then>
+<valueToAssertKey></valueToAssertKey>
+        <executionMode>TRACK</executionMode>
+</CheckResult>
+
+<vsiSource>{{LISA_RELATIVE_PROJ_ROOT}}/VirtualServices/Images/responseSideDPH.vsi</vsiSource>
+<requestPropertyName>lisa.vse.request</requestPropertyName>
+<outputAsObject>true</outputAsObject>
+<onExceptionStep>abort</onExceptionStep>
+    </Node>
+
+
+    <Node name="Virtual HTTPS Responder" log=""
+          type="com.itko.lisa.vse.stateful.protocol.http.HttpRespondStep" 
+          version="1" 
+          uid="null" 
+          think="0" 
+          useFilters="true" 
+          quiet="false" 
+          next="Virtual HTTPS Listener 8002" > 
+
+
+      <!-- Filters -->
+      <Filter type="com.itko.lisa.vse.stateful.common.DataProtocolFilter">
+        <valueToFilterKey>lisa.vse.response</valueToFilterKey>
+<dataProtocol>com.itko.lisa.vse.stateful.protocol.scriptable.ScriptableDataProtocolHandler</dataProtocol>
+<processRequests>false</processRequests>
+<processResponses>true</processResponses>
+<CustomFilterData>
+<updateResponseScript><![CDATA[%beanshell%
+
+lisa_vse_response.setBodyText("New body from Response - Recording");
+
+/*
+// You can use %beanshell%, %groovy% or %javascript% or some other installed JSR-223 scripting language
+// This example is for beanshell
+
+import com.itko.util.ParameterList;
+
+// Convert the incoming response into a format that VSE can work with,
+// for instance to unzip an HTTP response
+
+// Manipulate the body text
+String theBody = lisa_vse_response.getBodyText();
+lisa_vse_response.setBodyText("New body");
+
+// Manipulate the body as binary
+byte[] b = lisa_vse_response.getBodyBytes();
+lisa_vse_response.setBodyBytes(b);
+
+// Think time
+String thinkTime = lisa_vse_response.getThinkTimeSpec();
+lisa_vse_response.setThinkTimeSpec(thinkTime);
+
+// Other
+String asString = lisa_vse_response.toString();
+long id = lisa_vse_response.getId();
+
+// Metadata is a ParameterList
+ParameterList metadata = lisa_vse_response.getMetaData();
+lisa_vse_response.setMetaData(metadata);
+
+// Working with ParameterList
+
+ParameterList p = new ParameterList();
+
+// Do we want to allow dupes or not?
+p.setAllowDupes(true);
+boolean areDupesAllowed = p.isDupesAllowed();
+
+// Adding parameters
+p.addParameters("key1=val1&key2=val2");  // many at once
+p.addParameter(new Parameter("key3", "val3")); // one at a time
+
+// Looking up parameters
+String theVal = p.getParameterValue("key1");
+
+// Updating parameters
+p.setParameterValue("key3", "newVal");
+
+// Removing parameters
+p.removeParameter("key1");
+
+// Removing all parameters
+p.clear();
+*/
+]]></updateResponseScript>
+<updateTransientResponseScript><![CDATA[%beanshell%
+
+lisa_vse_response.setBodyText("New body from Response - Playback");
+
+/*
+// You can use %beanshell%, %groovy% or %javascript% or some other installed JSR-223 scripting language
+// This example is for beanshell
+
+import com.itko.util.ParameterList;
+
+// Convert the outgoing VSE response into a format the SUT expects,
+// for instance to compress an HTTP response
+
+// Manipulate the body text
+String theBody = lisa_vse_response.getBodyText();
+lisa_vse_response.setBodyText("New body");
+
+// Manipulate the body as binary
+byte[] b = lisa_vse_response.getBodyBytes();
+lisa_vse_response.setBodyBytes(b);
+
+// Think time
+String thinkTime = lisa_vse_response.getThinkTimeSpec();
+lisa_vse_response.setThinkTimeSpec(thinkTime);
+
+// Other
+String asString = lisa_vse_response.toString();
+long id = lisa_vse_response.getId();
+boolean isUnknownResponse = lisa_vse_response.isUnknown();
+
+// Metadata is a ParameterList
+ParameterList metadata = lisa_vse_response.getMetaData();
+lisa_vse_response.setMetaData(metadata);
+
+// Working with ParameterList
+
+ParameterList p = new ParameterList();
+
+// Do we want to allow dupes or not?
+p.setAllowDupes(true);
+boolean areDupesAllowed = p.isDupesAllowed();
+
+// Adding parameters
+p.addParameters("key1=val1&key2=val2");  // many at once
+p.addParameter(new Parameter("key3", "val3")); // one at a time
+
+// Looking up parameters
+String theVal = p.getParameterValue("key1");
+
+// Updating parameters
+p.setParameterValue("key3", "newVal");
+
+// Removing parameters
+p.removeParameter("key1");
+
+// Removing all parameters
+p.clear();
+*/
+]]></updateTransientResponseScript>
+</CustomFilterData>
+      </Filter>
+
+<responseList>lisa.vse.response</responseList>
+<onExceptionStep>abort</onExceptionStep>
+    </Node>
+
+
+    <Node name="Virtual Service Tracking" log=""
+          type="com.itko.lisa.vse.stateful.VSTrackingStep" 
+          version="1" 
+          uid="null" 
+          think="0" 
+          useFilters="true" 
+          quiet="true" 
+          next="Virtual HTTPS Responder" > 
+
+<imageResponseProperty>lisa.vse.image.response</imageResponseProperty>
+<liveResponseProperty>lisa.vse.live.response</liveResponseProperty>
+<onExceptionStep>abort</onExceptionStep>
+    </Node>
+
+
+    <Node name="abort" log="The test was aborted"
+          type="com.itko.lisa.test.AbortStep" 
+          version="1" 
+          uid="39C8D984E8C711E8A24900155DA5FC02" 
+          think="0h" 
+          useFilters="true" 
+          quiet="true" 
+          next="fail" > 
+
+    </Node>
+
+
+    <Node name="fail" log=""
+          type="com.itko.lisa.test.Abend" 
+          version="1" 
+          uid="39C8D982E8C711E8A24900155DA5FC02" 
+          think="0h" 
+          useFilters="true" 
+          quiet="true" 
+          next="fail" > 
+
+    </Node>
+
+
+    <Node name="end" log=""
+          type="com.itko.lisa.test.NormalEnd" 
+          version="1" 
+          uid="39C8D980E8C711E8A24900155DA5FC02" 
+          think="0h" 
+          useFilters="true" 
+          quiet="true" 
+          next="fail" > 
+
+    </Node>
+
+
+</VSModel>
