@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+
+<Project>
+<Name>SolFwk-LowCodeTestAutomationGeneration</Name>
+<Version>V2</Version>
+<Notes></Notes>
+<ActiveConfig>{{LISA_RELATIVE_PROJ_ROOT}}/Configs/eal_ESB-SOAP_VsVal_OutOfSync.config</ActiveConfig>
+</Project>
