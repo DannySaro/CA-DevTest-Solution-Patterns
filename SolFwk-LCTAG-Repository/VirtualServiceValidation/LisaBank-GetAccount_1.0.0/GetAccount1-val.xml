@@ -1,0 +1,39 @@
+<framework>
+	<templatename>Template_VSValidation</templatename>
+	<filters name="LiveCallFilters">
+		<filter>
+			<type>XMLXPath</type>
+			<xpathq>/env:Envelope/env:Body/ns2:getAccountResponse/return/id/text()</xpathq>
+			<property></property>
+		</filter>
+		<filter>
+			<type>XMLXPath</type>
+			<xpathq>/env:Envelope/env:Body/ns2:getAccountResponse/return/balance/text()</xpathq>
+			<property></property>
+		</filter>
+	</filters>
+	<filters name="VirtualCallFilters">
+		<filter>
+			<type>XMLXPath</type>
+			<xpathq>/env:Envelope/env:Body/ns2:getAccountResponse/return/id/text()</xpathq>
+			<property></property>
+		</filter>
+		<filter>
+			<type>XMLXPath</type>
+			<xpathq>/env:Envelope/env:Body/ns2:getAccountResponse/return/balance/text()</xpathq>
+			<property></property>
+		</filter>
+	</filters>
+	<validations name="LiveCallEqualsVirtualCall">
+		<validation>
+			<type>EnsurePropertiesAreEqual</type>
+			<property1>LiveCallFilters1</property1>
+			<property2>VirtualCallFilters1</property2>
+		</validation>
+		<validation>
+			<type>EnsurePropertiesAreEqual</type>
+			<property1>LiveCallFilters2</property1>
+			<property2>VirtualCallFilters2</property2>
+		</validation>
+	</validations>
+</framework>

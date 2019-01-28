@@ -1,0 +1,13 @@
+<framework>
+	<templatename>Template_APITest</templatename>
+	<validations name="ResponseAssertions">
+		<validation>
+			<type>ResultContainsString</type>
+			<containsString><![CDATA[<id>1433785278835443</id>]]></containsString>
+		</validation>
+		<validation>
+			<type>ResultContainsString</type>
+			<containsString><![CDATA[<balance>0.00</balance>]]></containsString>
+		</validation>	
+	</validations>
+</framework>
