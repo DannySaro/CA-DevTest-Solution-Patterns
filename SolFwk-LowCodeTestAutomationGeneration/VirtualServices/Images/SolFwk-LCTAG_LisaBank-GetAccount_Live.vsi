@@ -1,0 +1,106 @@
+<?xml version="1.0" ?>
+
+<serviceImage id="91" name="SolFwk-LCTAG_LisaBank-GetAccount_Live" created="2019-01-25.13:28:41.605" lastModified="2019-01-25.15:28:03.691" version="10.3.0" buildNumber="10.3.0.297">
+<st>
+<t id="89" nd="true">
+<sp>
+<t id="94">
+<rq id="95" op="getAccount" tl="EXACT">
+<ag>
+<p n="accountId" t="arg:EQUALS;true;;;;">1433785279732958</p>
+</ag>
+<at>
+<p n="xmlns">http://ejb3.examples.itko.com/</p>
+<p n="recorded_raw_request">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#13;&#10;&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;&#13;&#10;  &lt;soapenv:Body&gt;&#13;&#10;    &lt;getAccount xmlns=&quot;http://ejb3.examples.itko.com/&quot;&gt;&#13;&#10;      &lt;accountId xmlns=&quot;&quot;&gt;1433785279732958&lt;/accountId&gt;&#13;&#10;    &lt;/getAccount&gt;&#13;&#10;  &lt;/soapenv:Body&gt;&#13;&#10;&lt;/soapenv:Envelope&gt;</p>
+</at>
+<bd chs="UTF-8">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#13;&#10;&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;&#13;&#10;  &lt;soapenv:Body&gt;&#13;&#10;    &lt;getAccount xmlns=&quot;http://ejb3.examples.itko.com/&quot;&gt;&#13;&#10;      &lt;accountId xmlns=&quot;&quot;&gt;1433785279732958&lt;/accountId&gt;&#13;&#10;    &lt;/getAccount&gt;&#13;&#10;  &lt;/soapenv:Body&gt;&#13;&#10;&lt;/soapenv:Envelope&gt;</bd>
+</rq>
+<rs>
+<rp id="96" t="0">
+<m>
+<p n="HTTP-Response-Code">200</p>
+<p n="HTTP-Response-Code-Text">OK</p>
+<p n="Server">LISA/Virtual-Environment-Server</p>
+<p n="Date">{{=httpNow()}}</p>
+<p n="X-Powered-By">LISA/{{=lisaVersionString()}}</p>
+</m>
+<bd chs="UTF-8">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#13;&#10;&lt;env:Envelope xmlns:env=&apos;http://schemas.xmlsoap.org/soap/envelope/&apos;&gt;&#13;&#10;    &lt;env:Header&gt;&lt;/env:Header&gt;&#13;&#10;    &lt;env:Body&gt;&#13;&#10;        &lt;ns2:getAccountResponse xmlns:ns2=&quot;http://ejb3.examples.itko.com/&quot;&gt;&#13;&#10;            &lt;return&gt;&#13;&#10;                &lt;balance&gt;654321.00&lt;/balance&gt;&#13;&#10;                &lt;id&gt;{{=request_accountId;/*1433785279732958*/}}&lt;/id&gt;&#13;&#10;                &lt;name&gt;Primary&lt;/name&gt;&#13;&#10;                &lt;type&gt;CHECKING&lt;/type&gt;&#13;&#10;            &lt;/return&gt;&#13;&#10;        &lt;/ns2:getAccountResponse&gt;&#13;&#10;    &lt;/env:Body&gt;&#13;&#10;&lt;/env:Envelope&gt;</bd>
+</rp>
+</rs>
+</t>
+<t id="90">
+<rq id="97" op="getAccount" tl="EXACT">
+<ag>
+<p n="accountId" t="arg:EQUALS;true;;;;">1433785278835443</p>
+</ag>
+<at>
+<p n="xmlns">http://ejb3.examples.itko.com/</p>
+<p n="recorded_raw_request">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#13;&#10;&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;&#13;&#10;  &lt;soapenv:Body&gt;&#13;&#10;    &lt;getAccount xmlns=&quot;http://ejb3.examples.itko.com/&quot;&gt;&#13;&#10;      &lt;accountId xmlns=&quot;&quot;&gt;1433785278835443&lt;/accountId&gt;&#13;&#10;    &lt;/getAccount&gt;&#13;&#10;  &lt;/soapenv:Body&gt;&#13;&#10;&lt;/soapenv:Envelope&gt;</p>
+</at>
+<bd chs="UTF-8">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#13;&#10;&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;&#13;&#10;  &lt;soapenv:Body&gt;&#13;&#10;    &lt;getAccount xmlns=&quot;http://ejb3.examples.itko.com/&quot;&gt;&#13;&#10;      &lt;accountId xmlns=&quot;&quot;&gt;1433785278835443&lt;/accountId&gt;&#13;&#10;    &lt;/getAccount&gt;&#13;&#10;  &lt;/soapenv:Body&gt;&#13;&#10;&lt;/soapenv:Envelope&gt;</bd>
+</rq>
+<rs>
+<rp id="98" t="0">
+<m>
+<p n="HTTP-Response-Code">200</p>
+<p n="HTTP-Response-Code-Text">OK</p>
+<p n="Server">LISA/Virtual-Environment-Server</p>
+<p n="Date">{{=httpNow()}}</p>
+<p n="X-Powered-By">LISA/{{=lisaVersionString()}}</p>
+</m>
+<bd chs="UTF-8">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#13;&#10;&lt;env:Envelope xmlns:env=&apos;http://schemas.xmlsoap.org/soap/envelope/&apos;&gt;&#13;&#10;    &lt;env:Header&gt;&lt;/env:Header&gt;&#13;&#10;    &lt;env:Body&gt;&#13;&#10;        &lt;ns2:getAccountResponse xmlns:ns2=&quot;http://ejb3.examples.itko.com/&quot;&gt;&#13;&#10;            &lt;return&gt;&#13;&#10;                &lt;balance&gt;0.00&lt;/balance&gt;&#13;&#10;                &lt;id&gt;{{=request_accountId;/*1433785278835443*/}}&lt;/id&gt;&#13;&#10;                &lt;name&gt;Primary&lt;/name&gt;&#13;&#10;                &lt;type&gt;CHECKING&lt;/type&gt;&#13;&#10;            &lt;/return&gt;&#13;&#10;        &lt;/ns2:getAccountResponse&gt;&#13;&#10;    &lt;/env:Body&gt;&#13;&#10;&lt;/env:Envelope&gt;</bd>
+</rp>
+</rs>
+</t>
+</sp>
+<rq id="99" op="getAccount" tl="SIGNATURE">
+<ag>
+<p n="accountId" t="arg:EQUALS;true;;;;">1433785279732958</p>
+</ag>
+<at>
+<p n="xmlns">http://ejb3.examples.itko.com/</p>
+<p n="recorded_raw_request">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#13;&#10;&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;&#13;&#10;  &lt;soapenv:Body&gt;&#13;&#10;    &lt;getAccount xmlns=&quot;http://ejb3.examples.itko.com/&quot;&gt;&#13;&#10;      &lt;accountId xmlns=&quot;&quot;&gt;1433785279732958&lt;/accountId&gt;&#13;&#10;    &lt;/getAccount&gt;&#13;&#10;  &lt;/soapenv:Body&gt;&#13;&#10;&lt;/soapenv:Envelope&gt;</p>
+</at>
+<bd chs="UTF-8">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#13;&#10;&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;&#13;&#10;  &lt;soapenv:Body&gt;&#13;&#10;    &lt;getAccount xmlns=&quot;http://ejb3.examples.itko.com/&quot;&gt;&#13;&#10;      &lt;accountId xmlns=&quot;&quot;&gt;1433785279732958&lt;/accountId&gt;&#13;&#10;    &lt;/getAccount&gt;&#13;&#10;  &lt;/soapenv:Body&gt;&#13;&#10;&lt;/soapenv:Envelope&gt;</bd>
+</rq>
+<rs>
+<rp id="100" t="0">
+<m>
+<p n="HTTP-Response-Code">200</p>
+<p n="HTTP-Response-Code-Text">OK</p>
+<p n="Server">LISA/Virtual-Environment-Server</p>
+<p n="Date">{{=httpNow()}}</p>
+<p n="X-Powered-By">LISA/{{=lisaVersionString()}}</p>
+</m>
+<bd chs="UTF-8">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#13;&#10;&lt;env:Envelope xmlns:env=&apos;http://schemas.xmlsoap.org/soap/envelope/&apos;&gt;&#13;&#10;    &lt;env:Header&gt;&lt;/env:Header&gt;&#13;&#10;    &lt;env:Body&gt;&#13;&#10;        &lt;ns2:getAccountResponse xmlns:ns2=&quot;http://ejb3.examples.itko.com/&quot;&gt;&#13;&#10;            &lt;return&gt;&#13;&#10;                &lt;balance&gt;1234.56&lt;/balance&gt;&#13;&#10;                &lt;id&gt;{{=request_accountId;/*1433785279732958*/}}&lt;/id&gt;&#13;&#10;                &lt;name&gt;Primary&lt;/name&gt;&#13;&#10;                &lt;type&gt;CHECKING&lt;/type&gt;&#13;&#10;            &lt;/return&gt;&#13;&#10;        &lt;/ns2:getAccountResponse&gt;&#13;&#10;    &lt;/env:Body&gt;&#13;&#10;&lt;/env:Envelope&gt;</bd>
+</rp>
+</rs>
+</t>
+</st>
+<ucrr>
+<rp id="93" t="0">
+<m>
+<p n="HTTP-Response-Code">200</p>
+<p n="HTTP-Response-Code-Text">OK</p>
+<p n="Server">LISA/Virtual-Environment-Server</p>
+<p n="Date">{{=httpNow()}}</p>
+<p n="X-Powered-By">LISA/{{=lisaVersionString()}}</p>
+<p n="Content-Type">text/xml</p>
+</m>
+<bd chs="UTF-8">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#10;&lt;S:Envelope xmlns:S=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&#10;  &lt;S:Body&gt;&#10;    &lt;S:Fault xmlns:ns3=&quot;http://www.w3.org/2003/05/soap-envelope&quot;&gt;&#10;      &lt;faultcode&gt;S:Server&lt;/faultcode&gt;&#10;      &lt;faultstring&gt;The LISA VSE service could not match your request to a recorded request. Consider expanding your service image.&lt;/faultstring&gt;&#10;      &lt;detail&gt;&#10;        &lt;ns2:exception xmlns:ns2=&quot;http://jax-ws.dev.java.net/&quot; class=&quot;java.lang.Exception&quot;&gt;&#10;          &lt;message&gt;The LISA VSE service could not match your request to a recorded request. Consider expanding your service image.&lt;/message&gt;&#10;          &lt;ns2:stackTrace&gt;&#10;          &lt;/ns2:stackTrace&gt;&#10;        &lt;/ns2:exception&gt;&#10;      &lt;/detail&gt;&#10;    &lt;/S:Fault&gt;&#10;  &lt;/S:Body&gt;&#10;&lt;/S:Envelope&gt;&#10;&#10;</bd>
+</rp>
+</ucrr>
+<usrr>
+<rp id="92" t="0">
+<m>
+<p n="HTTP-Response-Code">200</p>
+<p n="HTTP-Response-Code-Text">OK</p>
+<p n="Server">LISA/Virtual-Environment-Server</p>
+<p n="Date">{{=httpNow()}}</p>
+<p n="X-Powered-By">LISA/{{=lisaVersionString()}}</p>
+<p n="Content-Type">text/xml</p>
+</m>
+<bd chs="UTF-8">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#10;&lt;S:Envelope xmlns:S=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&#10;  &lt;S:Body&gt;&#10;    &lt;S:Fault xmlns:ns3=&quot;http://www.w3.org/2003/05/soap-envelope&quot;&gt;&#10;      &lt;faultcode&gt;S:Server&lt;/faultcode&gt;&#10;      &lt;faultstring&gt;The LISA VSE service could not match your request to a recorded request. Consider expanding your service image.&lt;/faultstring&gt;&#10;      &lt;detail&gt;&#10;        &lt;ns2:exception xmlns:ns2=&quot;http://jax-ws.dev.java.net/&quot; class=&quot;java.lang.Exception&quot;&gt;&#10;          &lt;message&gt;The LISA VSE service could not match your request to a recorded request. Consider expanding your service image.&lt;/message&gt;&#10;          &lt;ns2:stackTrace&gt;&#10;          &lt;/ns2:stackTrace&gt;&#10;        &lt;/ns2:exception&gt;&#10;      &lt;/detail&gt;&#10;    &lt;/S:Fault&gt;&#10;  &lt;/S:Body&gt;&#10;&lt;/S:Envelope&gt;&#10;&#10;</bd>
+</rp>
+</usrr>
+</serviceImage>

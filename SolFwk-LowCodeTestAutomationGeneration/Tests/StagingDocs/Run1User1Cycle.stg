@@ -1,0 +1,123 @@
+<?xml version="1.0" ?>
+
+<Run name="Run1User1Cycle" think="100" pathfinder="false" >
+
+<meta>
+   <create version="0.0" buildNumber="0.0.0.0" author="jskress" date="10/28/2010" host="Macintosh-6.local" />
+   <lastEdited version="10.2.4" buildNumber="10.2.4.153" author="n1083" date="08/07/2018" host="V40363" />
+</meta>
+
+<id>66383534313961632D383364332D3432</id>
+<Documentation>This staging document runs a test with a single user one time with 100% think time scale.</Documentation>
+<IsInProject>true</IsInProject>
+<paceTime>0</paceTime>
+<paceTrans>0</paceTrans>
+<EventConsumer type="com.itko.lisa.report.DefaultReportToDataModel" filter="0,1,2,3,6,7,8,9,10,14,15,17,18,19,21,22,23,24,25,26,27,28,30,31,32,37,38,39,40,42,43,44,45,46,47,48,49,51,61,62,63,64,65,66,67,76,79,80,81,82,83,84,85,86,0" >
+<params>
+    <watchAllEvents>false</watchAllEvents>
+    <watchProps>false</watchProps>
+    <watchMetrics>true</watchMetrics>
+    <watchReqResp>true</watchReqResp>
+    <maxErrors>100</maxErrors>
+    <includeWarnings>true</includeWarnings>
+</params>
+</EventConsumer>
+<LoadPattern>
+<type>com.itko.lisa.coordinator.runpatterns.RunNTimesPattern</type>
+<cycles>1</cycles>
+<runfor>0</runfor>
+<ssinstances>1</ssinstances>
+</LoadPattern>
+<Distribution>
+<type>com.itko.lisa.coordinator.runpatterns.PercentDistribution</type>
+<Simulator>
+<name>auto</name>
+<percent>100</percent>
+<shortname>auto</shortname>
+</Simulator>
+</Distribution>
+<Metrics >
+<SampleRate>1</SampleRate>
+<IntervalRate>10</IntervalRate>
+<Metric type="com.itko.lisa.stats.TestEventCollector">
+<scale>0.0</scale>
+<valueType>1</valueType>
+<color>#c00000</color>
+<eventid>13</eventid>
+<keyexpr>*</keyexpr>
+<counter>true</counter>
+<AlertEmail>
+<low>0.0</low>
+<high>10.0</high>
+<emailFrom>lisaadmtest@aknettest.akb</emailFrom>
+<emailSub>Test Failed</emailSub>
+<emailMsg>L&#252;tfen test sonu&#231;lar&#305;n&#305; inceleyip d&#252;zeltmelerinizi yap&#305;n.</emailMsg>
+<mailHost>smtpsendtest.aknettest.akb</mailHost>
+<user>Lisaadmtest</user>
+<password_enc>l61705dae19a65b3c4a5e2106f3ade6256296935a0e39bd905964e80a66c4ad7d1dc7c352fc9d0f618aec4154</password_enc>
+<port>26</port>
+<emailTo>muharrem.gun@testuatmail.akbank.local</emailTo>
+</AlertEmail>
+</Metric>
+<Metric type="com.itko.lisa.stats.TestEventCollector">
+<scale>0.0</scale>
+<valueType>1</valueType>
+<color>#ff0000</color>
+<eventid>20</eventid>
+<keyexpr>*</keyexpr>
+<counter>true</counter>
+</Metric>
+<Metric type="com.itko.lisa.stats.TestEventCollector">
+<scale>0.0</scale>
+<valueType>1</valueType>
+<color>#0000ff</color>
+<eventid>15</eventid>
+<keyexpr>*</keyexpr>
+<counter>true</counter>
+<AlertEmail>
+<low>0.0</low>
+<high>0.0</high>
+<emailFrom>lisaadmtest@aknettest.akb</emailFrom>
+<emailSub>Test </emailSub>
+<emailMsg>Testtttt</emailMsg>
+<mailHost>smtpsendtest.aknettest.akb</mailHost>
+<user>Lisaadmtest</user>
+<password_enc>ld918cce586a1127ea4013a0c7bc3e7d5cfc2b12d5dbbbee29bf99cd67f3d99927eb74f36d1c7717cc28e1b53</password_enc>
+<port>26</port>
+<emailTo>muharrem.gun@testuatmail.akbank.local</emailTo>
+</AlertEmail>
+</Metric>
+<Metric type="com.itko.lisa.stats.TestEventCollector">
+<scale>0.0</scale>
+<valueType>1</valueType>
+<color>#c00000</color>
+<eventid>50</eventid>
+<keyexpr>*</keyexpr>
+<counter>true</counter>
+</Metric>
+<Metric type="com.itko.lisa.stats.TRIMetricCollector">
+<scale>0.0</scale>
+<valueType>2</valueType>
+<color>#ff00ff</color>
+<metric>0</metric>
+</Metric>
+<Metric type="com.itko.lisa.stats.TRIMetricCollector">
+<scale>0.0</scale>
+<valueType>2</valueType>
+<color>#404040</color>
+<metric>1</metric>
+</Metric>
+<Metric type="com.itko.lisa.stats.TRIMetricCollector">
+<scale>0.0</scale>
+<valueType>2</valueType>
+<color>#00a6af</color>
+<metric>5</metric>
+</Metric>
+</Metrics>
+<ipspoofing>
+<ipSpoofingEnabled>false</ipSpoofingEnabled>
+<useIPv4>true</useIPv4>
+<useIPv6>false</useIPv6>
+<selectionAlgorithm>ROUND_ROBIN</selectionAlgorithm>
+</ipspoofing>
+</Run>
