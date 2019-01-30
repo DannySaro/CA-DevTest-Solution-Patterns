@@ -53,8 +53,8 @@ REM SET dtStamp24=%date:~-4%%date:~7,2%%date:~4,2%_%time:~0,2%%time:~3,2%%time:~
 
 REM Timestamp setting Belgium
 REM -------------------------
-REM Following 2 lines cannot have blanks
-SET dtStamp9=%date:~-4%%date:~6,2%%date:~3,2%_0%time:~1,1%%time:~3,2%%time:~6,2% 
+REM Following 2 lines cannot have blanks, also no blanks at end of SET statement
+SET dtStamp9=%date:~-4%%date:~6,2%%date:~3,2%_0%time:~1,1%%time:~3,2%%time:~6,2%
 SET dtStamp24=%date:~-4%%date:~6,2%%date:~3,2%_%time:~0,2%%time:~3,2%%time:~6,2%
 
 if "%HOUR:~0,1%" == " " (SET DTSTAMP=%dtStamp9%) else (SET DTSTAMP=%dtStamp24%)
@@ -93,7 +93,7 @@ echo TestsOutputDirectory=%DT_PROJ_HOME:\=/%/Tests/%DTSTAMP%>> %DT_PROJ_HOME%\Co
 
 testrunner  -m tcp://localhost:2010/Registry -cs local -u admin -p admin -config %DT_PROJ_HOME%\Configs\%DTSTAMP%_%API_PROJ_CONFIG%.config -a -t %DT_PROJ_HOME%\Tests\Automation\CreateTestsV3.tst
 
-for %%f in (%DT_PROJ_HOME%\Tests\%DTSTAMP%\*.tst) do echo "Demo Artefact Repository Commit: %DT_PROJ_HOME%\bin\curl -v -u "<NexusBasicAuthenticationUser>:<NexusBasicAuthenticationPassword>;." --upload-file %%f http://<NexusHost>:<NexusPort>/nexus/content/repositories/SV_API/1/1/%DTSTAMP%/%%~nxf
+for %%f in (%DT_PROJ_HOME%\Tests\%DTSTAMP%\*.tst) do echo "Demo Artefact Repository Commit:" %DT_PROJ_HOME%\bin\curl -v -u "<NexusBasicAuthenticationUser>:<NexusBasicAuthenticationPassword>;." --upload-file %%f http://<NexusHost>:<NexusPort>/nexus/content/repositories/SV_API/1/1/%DTSTAMP%/%%~nxf
 
 pause
 goto :eof
