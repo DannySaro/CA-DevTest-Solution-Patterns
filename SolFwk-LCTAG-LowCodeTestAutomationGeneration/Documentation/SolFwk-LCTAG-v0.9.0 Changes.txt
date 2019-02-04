@@ -1,0 +1,4 @@
+Adding TestAutomationPipeLine.ps
+================================
+On some systems the batch file has an issue with shell.BrowseForFolder(  ,&H4000,  ). Gives a (null) unspecified error. This powershell might work in those cases.
+The powershel is functionally equivalent to the batch file.
